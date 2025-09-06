@@ -49,10 +49,14 @@ body {
 }
 
 .animate-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
     animation: fadeInUp 0.8s ease forwards;
 }
 
 .animate-fade-left {
+    opacity: 0;
+    transform: translateX(-30px);
     animation: fadeInLeft 0.6s ease forwards;
 }
 
@@ -119,20 +123,22 @@ nav {
 }
 
 .typewriter {
+    display: inline-block;
     overflow: hidden;
     border-right: 3px solid currentColor;
     white-space: nowrap;
-    animation: typewriter 2s steps(40) forwards, blink 1s infinite step-end;
+    animation: typewriter 2s steps(30) forwards, blink 1s infinite step-end;
     animation-delay: 0.5s;
     width: 0;
 }
 
 .typewriter-line2 {
+    display: inline-block;
     overflow: hidden;
     border-right: 3px solid currentColor;
     white-space: nowrap;
-    animation: typewriter 2s steps(40) forwards, blink 1s infinite step-end;
-    animation-delay: 2.5s;
+    animation: typewriter 2s steps(35) forwards, blink 1s infinite step-end;
+    animation-delay: 2.8s;
     width: 0;
 }
 
