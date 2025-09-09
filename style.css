@@ -504,6 +504,14 @@ footer {
     border-radius: 4px;
     font-size: 12px;
     font-weight: bold;
+    text-align: center;
+}
+
+.hover-instruction {
+    font-size: 10px;
+    font-weight: normal;
+    margin-top: 2px;
+    opacity: 0.9;
 }
 
 .quest-progress {
@@ -537,14 +545,20 @@ footer {
     height: 250px;
     overflow: hidden;
     border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.crisis-showcase:hover {
+    transform: scale(1.01);
 }
 
 .crisis-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 2px;
-    height: 100%;
+    gap: 8px;
+    height: 480px;
+    min-width: 960px;
 }
 
 .crisis-image {
@@ -577,4 +591,83 @@ footer {
 
 .crisis-showcase:hover .crisis-overlay {
     opacity: 1;
+}
+
+/* Individual Crisis Image Hover Effects */
+.crisis-image {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.crisis-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Hover reveal for each specific image */
+.crisis-image:nth-child(1) {
+    background-image: url('images/demos/compliance-crisis/sysco-foods-invoice.png');
+}
+
+.crisis-image:nth-child(1):hover {
+    background-image: url('images/demos/compliance-crisis/after/clean-invoices-after.png');
+}
+
+.crisis-image:nth-child(2) {
+    background-image: url('images/demos/compliance-crisis/commercial-kitchen-solutions-invoice.png');
+}
+
+.crisis-image:nth-child(2):hover {
+    background-image: url('images/demos/compliance-crisis/after/clean-invoices-after.png');
+}
+
+.crisis-image:nth-child(3) {
+    background-image: url('images/demos/compliance-crisis/murphys-farm-fresh-invoice.png');
+}
+
+.crisis-image:nth-child(3):hover {
+    background-image: url('images/demos/compliance-crisis/after/clean-invoices-after.png');
+}
+
+.crisis-image:nth-child(4) {
+    background-image: url('images/demos/compliance-crisis/inventory-downtown-csv.png');
+}
+
+.crisis-image:nth-child(4):hover {
+    background-image: url('images/demos/compliance-crisis/after/clean-inventory-after.png');
+}
+
+.crisis-image:nth-child(5) {
+    background-image: url('images/demos/compliance-crisis/inventory-northside-csv.png');
+}
+
+.crisis-image:nth-child(5):hover {
+    background-image: url('images/demos/compliance-crisis/after/clean-inventory-after.png');
+}
+
+.crisis-image:nth-child(6) {
+    background-image: url('images/demos/compliance-crisis/inventory-riverside-csv.png');
+}
+
+.crisis-image:nth-child(6):hover {
+    background-image: url('images/demos/compliance-crisis/after/clean-compliance-after.png');
+}
+
+/* Hover hint styling */
+.hover-hint {
+    font-size: 12px;
+    margin-top: 5px;
+    opacity: 0.8;
+    color: #ccc;
+    animation: pulse 2s infinite;
+}
+
+/* Subtle pulse animation for the hint */
+@keyframes pulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 0.5; }
 }
